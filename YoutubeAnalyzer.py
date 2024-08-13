@@ -11,11 +11,16 @@ JSONFolder = 'JSON Data/'
 def QueryUser():
     # Real code - Api request
     prompt = input("Enter search term to analyze. To do multiple for a better analysis, seperate each search term with a '|': ")
-    maxResults = input("Maximum amount of returned videos (capped at 50): ")
+    maxResults = input("Enter the maximum amount of results that should be returned (capped at 50): ")
 
     if maxResults == "" or int(maxResults) > 50:
-        print('Returning 50 results')
+        print('Clamped to 50 results')
         maxResults = "50"
+        
+    minimumTagUseCount = input("Enter the minimum amount of times a tag or word has to be used before considering it in data analysis... \n(<2 to keep all, 2 to remove uncommon, any more to your liking): ")
+
+    if minimumTagUseCount == "":
+        minimumTagUseCount = int(0)
 
     # Delete images first?
     if input("Clear previous analysis first? y/n?: ") == 'y':
@@ -37,10 +42,10 @@ def QueryUser():
                     shutil.rmtree(file_path)
             except Exception as e:
                 print('Failed to delete %s. Reason: %s' % (file_path, e))
-                
-    return (prompt, maxResults)
+    
+    return (prompt, maxResults, minimumTagUseCount)
 
-def DownloadYoutubeData(searchTerm, maxResults):
+def DownloadYoutubeData(searchTerm, maxResults, minimumTagUseCount):
     # Make API request        
     request = youtube.search().list(
         q=searchTerm,
@@ -102,11 +107,21 @@ def DownloadYoutubeData(searchTerm, maxResults):
         if not os.path.exists(directory):
             os.makedirs(directory)
         
-        # Attempt to get tags (tags dont always return)
+        # Attempt to get data (data doesnt always return)
         try:
-            tags = search_result['snippet']['tags'],
+            tags = search_result['snippet']['tags'][0],
         except Exception:
             tags = []
+            
+        try:
+            viewCount = int(search_result['statistics']['viewCount'])
+        except Exception:
+            viewCount = null
+            
+        try:
+            likeCount = int(search_result['statistics']['likeCount'])
+        except Exception:
+            likeCount = int(0)
             
         try:
             commentCount = int(search_result['statistics']['commentCount'])
@@ -120,17 +135,17 @@ def DownloadYoutubeData(searchTerm, maxResults):
                 "ChannelLink": 'https://www.youtube.com/channel/' + search_result['snippet']['channelId'],
                 "VideoId": search_result['id'],
                 "ChannelId": search_result['snippet']['channelId'],
-                "Title": search_result['snippet']['title'],
+                "Title": search_result['snippet']['title'].translate({ord(i): None for i in '()[]-_+=<>/`~'}),
                 "ChannelName": search_result['snippet']['channelTitle'],
                 "Description": search_result['snippet']['description'],
             },
             
             "stats":{
-                "ViewCount": search_result['statistics']['viewCount'],
-                "LikeCount": search_result['statistics']['likeCount'],
+                "ViewCount": viewCount,
+                "LikeCount": likeCount,
                 "CommentCount": commentCount,
-                "Like2ViewRatio": int(search_result['statistics']['likeCount']) / int(search_result['statistics']['viewCount']),
-                "Comment2ViewRatio": commentCount / int(search_result['statistics']['viewCount']),
+                "Like2ViewRatio": likeCount / viewCount,
+                "Comment2ViewRatio": commentCount / viewCount,
                 "Tags": tags,
             }
         }
@@ -147,16 +162,43 @@ def DownloadYoutubeData(searchTerm, maxResults):
     youtube.close()
 
 def AnalyzeYoutubeData():
+    Words, WordCounts, WordScores, Tags, TagCounts, TagScores = AnalyzeTextAndTags()
+    AnalyzeImages()
+    
+    # Contruct return data
+    data = {
+        "SortedWordsInTitle": Words,
+        "SortedWordCountsInTitle": WordCounts,
+        "SortedScoringForWords": WordsScore,
+        
+        "SortedTagsInTitle": Tags,
+        "SortedTagCountsInTitle": TagCounts,
+        "SortedScoringForTags": TagsScore,
+    }
+    
+    print(data)
+    return data
+
+def AnalyzeTextAndTags():
     # Setup variables
     Words = []
     WordCounts = []
+    WordScores = []
     
+    Tags = []
+    TagCounts = []
+    TagScores = []
+    
+    # Word and Tag analysis
     for dir, sub, files in os.walk(JSONFolder):
         for data in files:
             
             # Load data for processing
             print(data)
             data = json.load(open(dir + data))
+            
+            # Set scoring multiplier
+            ScoreMultiplier = data['stats']['ViewCount'] * data['stats']['Like2ViewRatio']
             
             # Slice title into a list of words
             list = str(data['videoDetails']['Title']).split()
@@ -168,23 +210,65 @@ def AnalyzeYoutubeData():
                 else:
                     index = Words.index(word)
                     WordCounts[index] = WordCounts[index] + 1
-            print(Words)
-            print(WordCounts)
+            for tag in data['stats']['Tags']:
+                if tag not in Tags:
+                    Tags.append(tag)
+                    TagCounts.append(1)
+                else:
+                    index = Tags.index(tag)
+                    TagCounts[index] = TagCounts[index] + 1
+                    
+            print(Words, WordCounts)
+            print(Tags, TagCounts)
             
     Words = [x for _, x in sorted(zip(WordCounts, Words))]
     WordCounts.sort()
+    Tags = [x for _, x in sorted(zip(TagCounts, Tags))]
+    TagCounts.sort()
+    
+    print(Words, WordCounts)
+    
+    # Remove tags with low numbers
+    while True and len(Words) > 10:
+        if (WordCounts[0] < int(minimumTagsUseCount)):
+            WordCounts.pop(0)
+            Words.pop(0)
+        else:
+            break
+    while True and len(Tags) > 10:
+        if (TagCounts[0] < 1):
+            TagCounts.pop(0)
+            Tags.pop(0)
+        else:
+            break
+    
+    
+    
+    # Reverse order for human readability.
     Words.reverse()
     WordCounts.reverse()
+    Tags.reverse()
+    TagCounts.reverse()
     
-    print(Words)
-    print(WordCounts)
+    print(Words, WordCounts)
+    print(Tags, TagCounts)
+    
+    return Words, WordCounts, WordScores, Tags, TagCounts, TagScores
+
+def AnalyzeImages():
+    hi
+
+def SaveAnalysisResults(fileName, results):
+    hi
+    # :)
 
 # Main
 if __name__ == "__main__":
-    prompt, maxResults = QueryUser()
-    list = prompt.split('|')
+    prompt, maxResults, minimumTagsUseCount, fileName = QueryUser()
+    splitPrompt = prompt.split('|')
     
-    for searchTerm in list:
-        DownloadYoutubeData(searchTerm, maxResults)
+    for searchTerm in splitPrompt:
+        DownloadYoutubeData(searchTerm, maxResults, minimumTagsUseCount)
         
-    AnalyzeYoutubeData()
+    list = AnalyzeYoutubeData()
+    SaveAnalysisResults(fileName, list)
