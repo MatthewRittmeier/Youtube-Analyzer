@@ -1,12 +1,17 @@
 from googleapiclient.discovery import build
+from PIL import Image
 import os, shutil
 import requests
 import json
+import random
+import webcolors
+import time
 
 api_key = 'AIzaSyBNp4NetZmqY791wFPD2AvbhVP9Scs3rh8'
 youtube = build('youtube', 'v3', developerKey=api_key)
 imgFolder = 'Images/'
 JSONFolder = 'JSON Data/'
+analysisFolder = 'Finished analysis/'
 
 def QueryUser():
     # Real code - Api request
@@ -21,6 +26,8 @@ def QueryUser():
 
     if minimumTagUseCount == "":
         minimumTagUseCount = int(0)
+        
+    fileName = input("File name: ")
 
     # Delete images first?
     if input("Clear previous analysis first? y/n?: ") == 'y':
@@ -43,7 +50,7 @@ def QueryUser():
             except Exception as e:
                 print('Failed to delete %s. Reason: %s' % (file_path, e))
     
-    return (prompt, maxResults, minimumTagUseCount)
+    return (prompt, maxResults, minimumTagUseCount, fileName)
 
 def DownloadYoutubeData(searchTerm, maxResults, minimumTagUseCount):
     # Make API request        
@@ -169,11 +176,11 @@ def AnalyzeYoutubeData():
     data = {
         "SortedWordsInTitle": Words,
         "SortedWordCountsInTitle": WordCounts,
-        "SortedScoringForWords": WordsScore,
+        "SortedScoringForWords": WordScores,
         
-        "SortedTagsInTitle": Tags,
-        "SortedTagCountsInTitle": TagCounts,
-        "SortedScoringForTags": TagsScore,
+        "SortedTags": Tags,
+        "SortedTagCounts": TagCounts,
+        "SortedScoringForTags": TagScores,
     }
     
     print(data)
@@ -202,28 +209,36 @@ def AnalyzeTextAndTags():
             
             # Slice title into a list of words
             list = str(data['videoDetails']['Title']).split()
+            
             # Analyze terms used in the titles
             for word in list:
                 if word not in Words:
                     Words.append(word)
                     WordCounts.append(1)
+                    WordScores.append(ScoreMultiplier)
                 else:
                     index = Words.index(word)
                     WordCounts[index] = WordCounts[index] + 1
+                    WordScores[index] += ScoreMultiplier
+            
             for tag in data['stats']['Tags']:
                 if tag not in Tags:
                     Tags.append(tag)
                     TagCounts.append(1)
+                    TagScores.append(ScoreMultiplier)
                 else:
                     index = Tags.index(tag)
                     TagCounts[index] = TagCounts[index] + 1
+                    TagScores[index] += ScoreMultiplier
                     
             print(Words, WordCounts)
             print(Tags, TagCounts)
             
     Words = [x for _, x in sorted(zip(WordCounts, Words))]
+    WordScores = [x for _, x in sorted(zip(WordCounts, WordScores))]
     WordCounts.sort()
     Tags = [x for _, x in sorted(zip(TagCounts, Tags))]
+    TagScores = [x for _, x in sorted(zip(TagCounts, TagScores))]
     TagCounts.sort()
     
     print(Words, WordCounts)
@@ -247,8 +262,10 @@ def AnalyzeTextAndTags():
     # Reverse order for human readability.
     Words.reverse()
     WordCounts.reverse()
+    WordScores.reverse()
     Tags.reverse()
     TagCounts.reverse()
+    TagScores.reverse()
     
     print(Words, WordCounts)
     print(Tags, TagCounts)
@@ -256,11 +273,51 @@ def AnalyzeTextAndTags():
     return Words, WordCounts, WordScores, Tags, TagCounts, TagScores
 
 def AnalyzeImages():
-    hi
+    print("Preparing image scans. See you in a while ;)")
+    time.sleep(0)
+    
+    # Lasting variables
+    Colors = []
+    ColorCounts = []
+    ColorScores = []
+    
+    # Loop through images
+    for dir, sub, files in os.walk(imgFolder):
+        for file in files:
+            print (imgFolder + file)
+            im = Image.open(imgFolder + file, 'r')
+            pixels = list(im.getdata())
+            width, height = im.size
+            pixels = [pixels[i * width:(i + 1) * width] for i in range(height)]
+            
+            for pixelArray in pixels:
+                for pixel in pixelArray:
+                    print(pixel)
+                    colorName = webcolors.hex_to_name(pixel)
+                    
+                    if colorName not in Colors:
+                        Colors.append(colorName)
+                        ColorCounts.append(1)
+                        #ColorScores.append("Nothing for now, just remember to do it later")
+                    else:
+                        index = Colors.index(colorName)
+                        ColorCounts[index] += 1
+                        
+            print("ioudfiuoergiuowergoiweriwerliweoiweoiweoreoewoweoweobwoweouweoweoiweobiwobiew")
 
 def SaveAnalysisResults(fileName, results):
-    hi
-    # :)
+    # File dir
+    file_dir = analysisFolder + fileName + '.json'
+        
+    # Change Json save location
+    directory = os.path.dirname(file_dir)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+        
+    # Create and write file
+    f = open(file_dir, 'w')
+    json.dump(data, f, indent = 6)  
+    f.close()
 
 # Main
 if __name__ == "__main__":
@@ -270,5 +327,5 @@ if __name__ == "__main__":
     for searchTerm in splitPrompt:
         DownloadYoutubeData(searchTerm, maxResults, minimumTagsUseCount)
         
-    list = AnalyzeYoutubeData()
-    SaveAnalysisResults(fileName, list)
+    data = AnalyzeYoutubeData()
+    SaveAnalysisResults(fileName, data)
