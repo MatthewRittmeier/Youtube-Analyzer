@@ -16,6 +16,9 @@ analysisFolder = 'Finished analysis/'
 def QueryUser():
     # Real code - Api request
     prompt = input("Enter search term to analyze. To do multiple for a better analysis, seperate each search term with a '|': ")
+    if prompt == "":
+        raise Exception("No search term specified")
+    
     maxResults = input("Enter the maximum amount of results that should be returned (capped at 50): ")
 
     if maxResults == "" or int(maxResults) > 50:
@@ -26,6 +29,17 @@ def QueryUser():
 
     if minimumTagUseCount == "":
         minimumTagUseCount = int(0)
+        
+    minimumWordUseCount = input("Same as last prompt, but instead with words in the title of a video. Input the minimum amount of times a word in the title has to appear before being considered in analysis: ")
+
+    if minimumWordUseCount == "":
+        minimumWordUseCount = int(0)
+        
+    minimumColorUseCount = input("Same as last prompt, but instead with colors. Input the minimum amount of times a color has to appear before being considered in analysis: ")
+        
+    if minimumColorUseCount == "":
+        minimumColorUseCount = int(0)
+        
         
     fileName = input("File name: ")
 
@@ -50,9 +64,9 @@ def QueryUser():
             except Exception as e:
                 print('Failed to delete %s. Reason: %s' % (file_path, e))
     
-    return (prompt, maxResults, minimumTagUseCount, fileName)
+    return (prompt, maxResults, int(minimumTagUseCount), fileName, int(minimumColorUseCount), int(minimumWordUseCount))
 
-def DownloadYoutubeData(searchTerm, maxResults, minimumTagUseCount):
+def DownloadYoutubeData(searchTerm, maxResults):
     # Make API request        
     request = youtube.search().list(
         q=searchTerm,
@@ -168,9 +182,9 @@ def DownloadYoutubeData(searchTerm, maxResults, minimumTagUseCount):
     # Close
     youtube.close()
 
-def AnalyzeYoutubeData():
-    Words, WordCounts, WordScores, Tags, TagCounts, TagScores = AnalyzeTextAndTags()
-    AnalyzeImages()
+def AnalyzeYoutubeData(minimumTagUseCount, minimumWordUseCount, minimumColorUseCount):
+    Words, WordCounts, WordScores, Tags, TagCounts, TagScores = AnalyzeTextAndTags(minimumTagUseCount, minimumWordUseCount)
+    Colors, ColorCounts, ColorScores = AnalyzeImages(minimumColorUseCount)
     
     # Contruct return data
     data = {
@@ -181,12 +195,16 @@ def AnalyzeYoutubeData():
         "SortedTags": Tags,
         "SortedTagCounts": TagCounts,
         "SortedScoringForTags": TagScores,
+        
+        "SortedColors": Colors,
+        "SortedColorCounts": ColorCounts,
+        "SortedColorScores": ColorScores, 
     }
     
     print(data)
     return data
 
-def AnalyzeTextAndTags():
+def AnalyzeTextAndTags(minimumTagUseCount, minimumWordUseCount):
     # Setup variables
     Words = []
     WordCounts = []
@@ -245,19 +263,19 @@ def AnalyzeTextAndTags():
     
     # Remove tags with low numbers
     while True and len(Words) > 10:
-        if (WordCounts[0] < int(minimumTagsUseCount)):
+        if (WordCounts[0] < int(minimumWordUseCount)):
             WordCounts.pop(0)
             Words.pop(0)
+            WordScores.pop(0)
         else:
             break
     while True and len(Tags) > 10:
-        if (TagCounts[0] < 1):
+        if (TagCounts[0] < minimumTagUseCount):
             TagCounts.pop(0)
             Tags.pop(0)
+            TagScores.pop(0)
         else:
             break
-    
-    
     
     # Reverse order for human readability.
     Words.reverse()
@@ -272,9 +290,21 @@ def AnalyzeTextAndTags():
     
     return Words, WordCounts, WordScores, Tags, TagCounts, TagScores
 
-def AnalyzeImages():
+def AnalyzeImages(minimumColorUseCount):
     print("Preparing image scans. See you in a while ;)")
-    time.sleep(0)
+    
+    ScoreMultiplierList = []
+    for dir, sub, files in os.walk(JSONFolder):
+        for data in files:
+            
+            # Load data for processing
+            data = json.load(open(dir + data))
+            
+            # Set scoring multiplier
+            ScoreMultiplierList.append(data['stats']['ViewCount'] * data['stats']['Like2ViewRatio'])
+            
+    print(ScoreMultiplierList)
+    time.sleep(3)
     
     # Lasting variables
     Colors = []
@@ -285,25 +315,51 @@ def AnalyzeImages():
     for dir, sub, files in os.walk(imgFolder):
         for file in files:
             print (imgFolder + file)
+            
+            ScoreMultiplier = ScoreMultiplierList[files.index(file)]
             im = Image.open(imgFolder + file, 'r')
             pixels = list(im.getdata())
-            width, height = im.size
-            pixels = [pixels[i * width:(i + 1) * width] for i in range(height)]
             
-            for pixelArray in pixels:
-                for pixel in pixelArray:
-                    print(pixel)
-                    colorName = webcolors.hex_to_name(pixel)
+            for pixel in pixels:
+                try:
+                    colorName = webcolors.rgb_to_name(pixel)  
+                except Exception:
+                    colorName = "N/A"
                     
-                    if colorName not in Colors:
-                        Colors.append(colorName)
-                        ColorCounts.append(1)
-                        #ColorScores.append("Nothing for now, just remember to do it later")
-                    else:
-                        index = Colors.index(colorName)
-                        ColorCounts[index] += 1
+                print(colorName + ": " + str(pixel))
+                
+                if colorName not in Colors:
+                    Colors.append(colorName)
+                    ColorCounts.append(1)
+                    ColorScores.append(ScoreMultiplier)
+                else:
+                    index = Colors.index(colorName)
+                    ColorCounts[index] += 1
+                    ColorScores[index] += ScoreMultiplier
                         
-            print("ioudfiuoergiuowergoiweriwerliweoiweoiweoreoewoweoweobwoweouweoweoiweobiwobiew")
+            print("Image " + str(files.index(file) + 1) + " out of " + str(len(files)) + " done processing. Proceeding to the next image.")
+            time.sleep(2)
+            print(Colors, ColorCounts, ColorScores)
+           
+    # Sort 
+    Colors = [x for _, x in sorted(zip(ColorCounts, Colors))]
+    ColorScores = [x for _, x in sorted(zip(ColorCounts, ColorScores))]
+    ColorCounts.sort()
+            
+    # Remove tags with low numbers
+    while True and len(Colors) > 10:
+        if (ColorCounts[0] < int(minimumColorUseCount)):
+            ColorCounts.pop(0)
+            Colors.pop(0)
+            ColorScores.pop(0)
+        else:
+            break
+        
+    Colors.reverse()
+    ColorCounts.reverse()
+    ColorScores.reverse()
+    
+    return (Colors, ColorCounts, ColorScores)
 
 def SaveAnalysisResults(fileName, results):
     # File dir
@@ -321,11 +377,11 @@ def SaveAnalysisResults(fileName, results):
 
 # Main
 if __name__ == "__main__":
-    prompt, maxResults, minimumTagsUseCount, fileName = QueryUser()
+    prompt, maxResults, minimumTagUseCount, fileName, minimumColorUseCount, minimumWordUseCount = QueryUser()
     splitPrompt = prompt.split('|')
     
     for searchTerm in splitPrompt:
-        DownloadYoutubeData(searchTerm, maxResults, minimumTagsUseCount)
+        DownloadYoutubeData(searchTerm, maxResults)
         
-    data = AnalyzeYoutubeData()
+    data = AnalyzeYoutubeData(minimumTagUseCount, minimumWordUseCount, minimumColorUseCount)
     SaveAnalysisResults(fileName, data)
