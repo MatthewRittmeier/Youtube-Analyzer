@@ -13,6 +13,13 @@ imgFolder = 'Images/'
 JSONFolder = 'JSON Data/'
 analysisFolder = 'Finished analysis/'
 
+# Set settings folder
+settingsFile = "settings.json"
+
+settings = json.load(open(settingsFile))
+ColorSimplifierFactor = settings["ColorSimplifierFactor"]
+OpenImagesOnProcess = settings["OpenImagesOnProcess"]
+
 def QueryUser():
     # Real code - Api request
     prompt = input("Enter search term to analyze. To do multiple for a better analysis, seperate each search term with a '|': ")
@@ -302,7 +309,7 @@ def AnalyzeImages(minimumColorUseCount):
             
             # Set scoring multiplier
             ScoreMultiplierList.append(data['stats']['ViewCount'] * data['stats']['Like2ViewRatio'])
-            
+    
     print(ScoreMultiplierList)
     time.sleep(3)
     
@@ -318,25 +325,28 @@ def AnalyzeImages(minimumColorUseCount):
             
             ScoreMultiplier = ScoreMultiplierList[files.index(file)]
             im = Image.open(imgFolder + file, 'r')
+            if OpenImagesOnProcess:
+                im.show()
             pixels = list(im.getdata())
             
             for pixel in pixels:
-                try:
-                    colorName = webcolors.rgb_to_name(pixel)  
-                except Exception:
-                    colorName = "N/A"
-                    
-                print(colorName + ": " + str(pixel))
+                # Simplify the color 
+                simplifiedPixel = (pixel[0] / ColorSimplifierFactor, pixel[1] / ColorSimplifierFactor, pixel[2] / ColorSimplifierFactor)
+                simplifiedPixel = (round(simplifiedPixel[0]), round(simplifiedPixel[1]), round(simplifiedPixel[2]))
+                simplifiedPixel = (simplifiedPixel[0] * ColorSimplifierFactor, simplifiedPixel[1] * ColorSimplifierFactor, simplifiedPixel[2] * ColorSimplifierFactor)
+                simplifiedPixel = str(simplifiedPixel)
                 
-                if colorName not in Colors:
-                    Colors.append(colorName)
+                print(simplifiedPixel, pixel)
+                
+                if simplifiedPixel not in Colors:
+                    Colors.append(simplifiedPixel)
                     ColorCounts.append(1)
                     ColorScores.append(ScoreMultiplier)
                 else:
-                    index = Colors.index(colorName)
+                    index = Colors.index(simplifiedPixel)
                     ColorCounts[index] += 1
                     ColorScores[index] += ScoreMultiplier
-                        
+                       
             print("Image " + str(files.index(file) + 1) + " out of " + str(len(files)) + " done processing. Proceeding to the next image.")
             time.sleep(2)
             print(Colors, ColorCounts, ColorScores)
