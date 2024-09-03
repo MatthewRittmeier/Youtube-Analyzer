@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=yAxZEnxgjBg",
+            "ChannelLink": "https://www.youtube.com/channel/UC-nb1-Ecg2Hr_Z5EraxKbEA",
+            "VideoId": "yAxZEnxgjBg",
+            "ChannelId": "UC-nb1-Ecg2Hr_Z5EraxKbEA",
+            "Title": "Cat Wants To Marry Chihuahua #memes",
+            "ChannelName": "HmmFish",
+            "Description": "Cat Wants To Marry Chihuahua but Chihuahua doesn't. This leads to a funny conversation"
+      },
+      "stats": {
+            "ViewCount": 24737121,
+            "LikeCount": 635125,
+            "CommentCount": 14248,
+            "Like2ViewRatio": 0.025674976485743833,
+            "Comment2ViewRatio": 0.0005759764848949075,
+            "Tags": [
+                  "Chihuahua"
+            ]
+      }
+}

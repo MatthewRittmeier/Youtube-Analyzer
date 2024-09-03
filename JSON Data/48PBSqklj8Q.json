@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=48PBSqklj8Q",
+            "ChannelLink": "https://www.youtube.com/channel/UCCOtiSSJXJmv7ugkjuv6tQg",
+            "VideoId": "48PBSqklj8Q",
+            "ChannelId": "UCCOtiSSJXJmv7ugkjuv6tQg",
+            "Title": "Orange Cat Behavior #cat #funnycats #pets #funnypets #shorts",
+            "ChannelName": "pet lover",
+            "Description": ""
+      },
+      "stats": {
+            "ViewCount": 9320300,
+            "LikeCount": 606031,
+            "CommentCount": 4725,
+            "Like2ViewRatio": 0.06502269240260507,
+            "Comment2ViewRatio": 0.0005069579305387165,
+            "Tags": [
+                  "cat"
+            ]
+      }
+}
