@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=QKXTWfY7DSs",
+            "ChannelLink": "https://www.youtube.com/channel/UCTsKWMixi1wsGQ1ncaLiseA",
+            "VideoId": "QKXTWfY7DSs",
+            "ChannelId": "UCTsKWMixi1wsGQ1ncaLiseA",
+            "Title": "Interesting graphs #desmos #maths",
+            "ChannelName": "Glitch Maths",
+            "Description": ""
+      },
+      "stats": {
+            "ViewCount": 5261,
+            "LikeCount": 94,
+            "CommentCount": 14,
+            "Like2ViewRatio": 0.017867325603497432,
+            "Comment2ViewRatio": 0.002661091047329405,
+            "Tags": [
+                  "Maths"
+            ]
+      }
+}

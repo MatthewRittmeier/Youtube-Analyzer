@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=OfOA4RKgIlA",
+            "ChannelLink": "https://www.youtube.com/channel/UCnhh3PZylK2kjedZII7JjMA",
+            "VideoId": "OfOA4RKgIlA",
+            "ChannelId": "UCnhh3PZylK2kjedZII7JjMA",
+            "Title": "Desmos Plays \"Never Gonna Give You Up\" using 1,500,000 Curves",
+            "ChannelName": "Ben Mullan",
+            "Description": "~2000 B\u00e9zier Curves per Frame, at 25 Frames each second, multiplied by 30 seconds makes ~1,500,000 B\u00e9zier Curves. Each frame was plotted programmatically on the Desmos graphing calculator using custom software: https://github.com/BenMullan/GraphPictures\n\nIf you are want to see a bit more about how this sort of thing can be done, do take a look at some of the experimental Graphs I produced along the way:\n- Animated Hexagon: https://www.desmos.com/calculator/efj4ndrlvt\n- Swan: https://www.desmos.com/calculator/6acoyqsq7j\n- Coloured Windows Logo: https://www.desmos.com/calculator/vc7dub2kdj\n- \"See?\": https://www.desmos.com/calculator/x5cu6ntcoy\n- Animated Shield: https://www.desmos.com/calculator/pb6ycqbwp8\n- Draggable B\u00e9zier: https://www.desmos.com/calculator/bvsz7lqnr0\n- Example Rick-Frame: https://www.desmos.com/calculator/wmrcevcnnz\n\nThanks for watching!"
+      },
+      "stats": {
+            "ViewCount": 554304,
+            "LikeCount": 24542,
+            "CommentCount": 724,
+            "Like2ViewRatio": 0.04427534349382289,
+            "Comment2ViewRatio": 0.001306142477773929,
+            "Tags": [
+                  "Desmos"
+            ]
+      }
+}

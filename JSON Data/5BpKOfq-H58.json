@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=5BpKOfq-H58",
+            "ChannelLink": "https://www.youtube.com/channel/UC_IR-dUP9trF4W8LS0_1EnA",
+            "VideoId": "5BpKOfq-H58",
+            "ChannelId": "UC_IR-dUP9trF4W8LS0_1EnA",
+            "Title": "Webinar: Introduction to the Desmos Graphing Calculator",
+            "ChannelName": "Desmos",
+            "Description": "This webinar is designed to introduce participants to the Desmos Graphing Calculator through a blend of demonstration and hands-on experience of basic Desmos functionality.\n\nYou can find more how-to videos, as well as our collection of interactive tours, at http://learn.desmos.com."
+      },
+      "stats": {
+            "ViewCount": 70103,
+            "LikeCount": 363,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.005178095088655264,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

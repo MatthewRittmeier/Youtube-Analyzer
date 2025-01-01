@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=eOAwjc8B-Do",
+            "ChannelLink": "https://www.youtube.com/channel/UCy4FLVrxj6xwlXDAnZ0e2FQ",
+            "VideoId": "eOAwjc8B-Do",
+            "ChannelId": "UCy4FLVrxj6xwlXDAnZ0e2FQ",
+            "Title": "Tanks! in the Desmos graphing calculator",
+            "ChannelName": "Finch Lau",
+            "Description": "I'll be making a follow up video showing how I made it either next week the the week after that. I might be taking a little break from YouTube so I can work on a big Desmos project that I have in mind. If I do decide to do that I'll tell you in the next video."
+      },
+      "stats": {
+            "ViewCount": 205,
+            "LikeCount": 10,
+            "CommentCount": 7,
+            "Like2ViewRatio": 0.04878048780487805,
+            "Comment2ViewRatio": 0.03414634146341464,
+            "Tags": []
+      }
+}

@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=1hxvl-AYHqY",
+            "ChannelLink": "https://www.youtube.com/channel/UCoAluL5TOSTfSo6-xjAkUIg",
+            "VideoId": "1hxvl-AYHqY",
+            "ChannelId": "UCoAluL5TOSTfSo6-xjAkUIg",
+            "Title": "MATT Connect No. 18: Graphing Calculator Powered by Desmos",
+            "ChannelName": "HumanWare ",
+            "Description": "Starting in Prodigi 4.2.0, the calculator now offers the option of graphing your funcitons using the Prodigi Calculator Powered by Desmos."
+      },
+      "stats": {
+            "ViewCount": 508,
+            "LikeCount": 0,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.0,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "new application"
+            ]
+      }
+}

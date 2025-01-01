@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=TLeJ1yViTKo",
+            "ChannelLink": "https://www.youtube.com/channel/UChZwRZCZ0kMcd9L7_Mh0Spw",
+            "VideoId": "TLeJ1yViTKo",
+            "ChannelId": "UChZwRZCZ0kMcd9L7_Mh0Spw",
+            "Title": "Desmos Online Graphing Calculator",
+            "ChannelName": "Laura McLaughlin",
+            "Description": "A short technology review of Desmos Online Graphing Calculator"
+      },
+      "stats": {
+            "ViewCount": 4,
+            "LikeCount": 0,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.0,
+            "Comment2ViewRatio": 0.0,
+            "Tags": []
+      }
+}

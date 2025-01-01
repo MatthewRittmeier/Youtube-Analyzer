@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=4_8eY_Ij-5k",
+            "ChannelLink": "https://www.youtube.com/channel/UCUTey_NRgvUNBUvtY0KY4Ew",
+            "VideoId": "4_8eY_Ij-5k",
+            "ChannelId": "UCUTey_NRgvUNBUvtY0KY4Ew",
+            "Title": "I animated this in Desmos Graphing Calculator",
+            "ChannelName": "JohnDoesStuff",
+            "Description": "Explanation: https://youtu.be/6tBkJhmpfFc\n\nThumbnail by my good friend Jack\n\nGraph: https://www.desmos.com/calculator/0njfwi6qhr\nMusic: https://youtu.be/SsYCPtOaTKw"
+      },
+      "stats": {
+            "ViewCount": 2057952,
+            "LikeCount": 146426,
+            "CommentCount": 3319,
+            "Like2ViewRatio": 0.07115131936993671,
+            "Comment2ViewRatio": 0.0016127684221983797,
+            "Tags": []
+      }
+}

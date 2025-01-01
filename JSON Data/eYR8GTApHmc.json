@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=eYR8GTApHmc",
+            "ChannelLink": "https://www.youtube.com/channel/UCfeonoaE60LpuJLlBidc5IA",
+            "VideoId": "eYR8GTApHmc",
+            "ChannelId": "UCfeonoaE60LpuJLlBidc5IA",
+            "Title": "Making a Game in Desmos: #5  Coins & Crossfire",
+            "ChannelName": "Reid Captain",
+            "Description": "Please leave your feedback below!\n\nA lot of the equations I showed only directly applied if the shots were traveling at the same speed of the player. There are easy fixes to make them travel faster, but it would've just over complicated things to add that in too. \n\nCube Demonstation: https://www.desmos.com/calculator/3tes8dbt9z"
+      },
+      "stats": {
+            "ViewCount": 30337,
+            "LikeCount": 807,
+            "CommentCount": 25,
+            "Like2ViewRatio": 0.026601180077133534,
+            "Comment2ViewRatio": 0.0008240762105679533,
+            "Tags": []
+      }
+}

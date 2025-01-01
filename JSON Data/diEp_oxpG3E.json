@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=diEp_oxpG3E",
+            "ChannelLink": "https://www.youtube.com/channel/UCDpRdvNt880aCxx-Uwj_0Mw",
+            "VideoId": "diEp_oxpG3E",
+            "ChannelId": "UCDpRdvNt880aCxx-Uwj_0Mw",
+            "Title": "Crab Gaming in Desmos Graphing Calculator",
+            "ChannelName": "Kjch",
+            "Description": "mmm look at those sexy vectors and bezier curves mMMMm\n\np.s. I didn't actually play crab game in desmos, its a prerecorded video converted into a desmos animation\n\ncredits to @Junferno for the info on how to make this happen:\nhttps://github.com/kevinjycui/DesmosBezierRenderer\n\ncgc discord: https://discord.gg/crabgame"
+      },
+      "stats": {
+            "ViewCount": 336296,
+            "LikeCount": 11995,
+            "CommentCount": 307,
+            "Like2ViewRatio": 0.035667982967385874,
+            "Comment2ViewRatio": 0.0009128862668601471,
+            "Tags": [
+                  "crab game"
+            ]
+      }
+}

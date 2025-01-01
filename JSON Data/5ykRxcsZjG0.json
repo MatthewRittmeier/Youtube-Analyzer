@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=5ykRxcsZjG0",
+            "ChannelLink": "https://www.youtube.com/channel/UC35fEXSE9nGklLAVkf_glNw",
+            "VideoId": "5ykRxcsZjG0",
+            "ChannelId": "UC35fEXSE9nGklLAVkf_glNw",
+            "Title": "Galaxy And Quasar Art in the Desmos Graphing Calculator",
+            "ChannelName": "Jake Walker",
+            "Description": "Song: Iridescence - Catapillie (Celeste: Strawberry Jam OST)\n\nGRAPH LINKS:\nGalaxy: https://www.desmos.com/calculator/htxry4kfwf\nQuasar: https://www.desmos.com/calculator/siamjvz5c7\n\nAbout a week ago I felt inspired by the skybox backgrounds from the Super Mario Galaxy games, specifically the World 5 skybox from SMG2. I decided to try my hand at making a galaxy in the Desmos graphing calculator. When I shared the graph in the Desmos discord server, someone suggested I make a quasar, so I gave that a shot as well.\nBoth of these ended up coming out really well, especially the quasar one in my opinion. Weirdly enough, the quasar graph actually runs faster than the galaxy one, despite having more things in it. This is most likely because the way I did the spirals used a much slower method in the galaxy graph than the quasar one.\nHope you enjoy!"
+      },
+      "stats": {
+            "ViewCount": 4969,
+            "LikeCount": 323,
+            "CommentCount": 37,
+            "Like2ViewRatio": 0.06500301871603945,
+            "Comment2ViewRatio": 0.0074461662306299055,
+            "Tags": [
+                  "math"
+            ]
+      }
+}

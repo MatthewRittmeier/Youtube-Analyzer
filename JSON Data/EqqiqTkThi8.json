@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=EqqiqTkThi8",
+            "ChannelLink": "https://www.youtube.com/channel/UC_IR-dUP9trF4W8LS0_1EnA",
+            "VideoId": "EqqiqTkThi8",
+            "ChannelId": "UC_IR-dUP9trF4W8LS0_1EnA",
+            "Title": "Accessibility Features in the Desmos Graphing Calculator",
+            "ChannelName": "Desmos",
+            "Description": "At Desmos, our mission is to help every student learn math and love learning math. With that in mind, we've introduced improvements to our free online graphing calculator to ensure that students who are blind or visually impaired have the same opportunities as their peers to discover the joy of learning math."
+      },
+      "stats": {
+            "ViewCount": 73213,
+            "LikeCount": 63,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.0008605029161487714,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

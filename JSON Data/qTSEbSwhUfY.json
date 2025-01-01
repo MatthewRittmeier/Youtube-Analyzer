@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=qTSEbSwhUfY",
+            "ChannelLink": "https://www.youtube.com/channel/UCLjxZnUJ5k_MweGGjYsz9uQ",
+            "VideoId": "qTSEbSwhUfY",
+            "ChannelId": "UCLjxZnUJ5k_MweGGjYsz9uQ",
+            "Title": "Make a 3D engine in Desmos in 3 minutes.",
+            "ChannelName": "Radian628",
+            "Description": "Try the completed demo here: https://www.desmos.com/calculator/oj5qje7lm5"
+      },
+      "stats": {
+            "ViewCount": 51193,
+            "LikeCount": 1827,
+            "CommentCount": 108,
+            "Like2ViewRatio": 0.03568847303342254,
+            "Comment2ViewRatio": 0.002109663430547145,
+            "Tags": []
+      }
+}

@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=vOQfxyxjslI",
+            "ChannelLink": "https://www.youtube.com/channel/UCNVMxRMEwvo9AS-Jfh6fQFg",
+            "VideoId": "vOQfxyxjslI",
+            "ChannelId": "UCNVMxRMEwvo9AS-Jfh6fQFg",
+            "Title": "New!  Desmos Now Has a 3D Graphing Calculator!  #desmos",
+            "ChannelName": "Mathispower4u",
+            "Description": "This video introduces the new Desmos 3D graphing calculator. Calculator Link: https://www.desmos.com/3d Blog Post: https://blog.desmos.com/articles/beta-3d-release/"
+      },
+      "stats": {
+            "ViewCount": 6709,
+            "LikeCount": 263,
+            "CommentCount": 11,
+            "Like2ViewRatio": 0.039201073185273515,
+            "Comment2ViewRatio": 0.00163958861231182,
+            "Tags": [
+                  "Desmos"
+            ]
+      }
+}

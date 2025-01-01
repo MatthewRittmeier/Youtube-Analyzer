@@ -37,12 +37,12 @@ def QueryUser():
     if minimumTagUseCount == "":
         minimumTagUseCount = int(0)
         
-    minimumWordUseCount = input("Same as last prompt, but instead with words in the title of a video. Input the minimum amount of times a word in the title has to appear before being considered in analysis: ")
+    minimumWordUseCount = input("Input the minimum amount of times a word in the title has to appear before being considered in analysis: ")
 
     if minimumWordUseCount == "":
         minimumWordUseCount = int(0)
         
-    minimumColorUseCount = input("Same as last prompt, but instead with colors. Input the minimum amount of times a color has to appear before being considered in analysis: ")
+    minimumColorUseCount = input("Input the minimum amount of times a color has to appear before being considered in analysis: ")
         
     if minimumColorUseCount == "":
         minimumColorUseCount = int(0)

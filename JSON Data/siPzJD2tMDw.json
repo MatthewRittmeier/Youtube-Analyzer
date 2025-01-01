@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=siPzJD2tMDw",
+            "ChannelLink": "https://www.youtube.com/channel/UCRb6Mw3fJ6OFzp-cB9X29aA",
+            "VideoId": "siPzJD2tMDw",
+            "ChannelId": "UCRb6Mw3fJ6OFzp-cB9X29aA",
+            "Title": "Bad Apple!! played on Desmos Graphing Calculator",
+            "ChannelName": "Junferno",
+            "Description": "Calculus exam be like: find the integral. This took over an hour to render and there are parts out of sync, so sorry about that! Uses Desmos API, HTML+Vanilla JS, Python PIL.\n\nBetter version to watch after you finish watching this one: https://www.youtube.com/watch?v=MVrNn5TuMkY\n\nCheck out my other stuff on GitHub https://github.com/kevinjycui\nDiscord server: https://discord.gg/WEykWbjkR2"
+      },
+      "stats": {
+            "ViewCount": 817223,
+            "LikeCount": 50529,
+            "CommentCount": 1670,
+            "Like2ViewRatio": 0.061830124702804495,
+            "Comment2ViewRatio": 0.0020435058729379864,
+            "Tags": []
+      }
+}

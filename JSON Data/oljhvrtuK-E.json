@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=oljhvrtuK-E",
+            "ChannelLink": "https://www.youtube.com/channel/UCUTey_NRgvUNBUvtY0KY4Ew",
+            "VideoId": "oljhvrtuK-E",
+            "ChannelId": "UCUTey_NRgvUNBUvtY0KY4Ew",
+            "Title": "SIN X  Desmos Global Math Art Contest Animation",
+            "ChannelName": "JohnDoesStuff",
+            "Description": "Original Graph: https://www.desmos.com/calculator/jogy7nncsa\n\nThis is my excuse for being inactive for 3 weeks, 38hrs of work. The value of the play variable is not accurate in this video because I slowed the animation speed so I could get higher fps but other than that the graph is unchanged. Also, this may not look terribly impressive from an animation perspective but this was done entirely with equations in a graphing calculator."
+      },
+      "stats": {
+            "ViewCount": 26633,
+            "LikeCount": 1067,
+            "CommentCount": 49,
+            "Like2ViewRatio": 0.04006307963804303,
+            "Comment2ViewRatio": 0.001839822776255022,
+            "Tags": []
+      }
+}

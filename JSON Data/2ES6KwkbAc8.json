@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=2ES6KwkbAc8",
+            "ChannelLink": "https://www.youtube.com/channel/UCF9tg6Jif_DNodyPMB5aQsg",
+            "VideoId": "2ES6KwkbAc8",
+            "ChannelId": "UCF9tg6Jif_DNodyPMB5aQsg",
+            "Title": "Hatsune Miku oo ee oo, but it's in Desmos Graphing Calculator #shorts #miku #desmos #anime",
+            "ChannelName": "RoboDoc",
+            "Description": "#graphingcalculator #scientificcalculator #hatsunemiku \n\nRemade the original in Desmos Graphing Calculator\nOriginal video: https://www.youtube.com/shorts/2oa5WCUpwD8\n\nWant to make something like this?\nHere is the project I used: https://github.com/kevinjycui/DesmosBezierRenderer\nIt's a program made by @Junferno \nI also wrote a set of instructions for dummies: https://gist.github.com/TheRoboDoc/0d9095bf799f1f368ec5e361d9be534f"
+      },
+      "stats": {
+            "ViewCount": 341920,
+            "LikeCount": 41549,
+            "CommentCount": 300,
+            "Like2ViewRatio": 0.1215167290594291,
+            "Comment2ViewRatio": 0.0008773982218062704,
+            "Tags": [
+                  "Desmos"
+            ]
+      }
+}

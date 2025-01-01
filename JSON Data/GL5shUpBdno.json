@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=GL5shUpBdno",
+            "ChannelLink": "https://www.youtube.com/channel/UCuEZoiz0pkYukS_lREgxQjw",
+            "VideoId": "GL5shUpBdno",
+            "ChannelId": "UCuEZoiz0pkYukS_lREgxQjw",
+            "Title": "Amazing Math Animations",
+            "ChannelName": "Andrew",
+            "Description": "Amazing graphs dictated by mathematical rules, now in the animated format.\n\nThis video is a part of the series.\nPlaylist: https://www.youtube.com/playlist?list=PLAjLiSaFZ0UkauHqURdiTp2uB7e-wx4L9\n\nGraphing calculator - https://desmos.com/calculator\n\nhttps://enderman.ch"
+      },
+      "stats": {
+            "ViewCount": 634935,
+            "LikeCount": 29007,
+            "CommentCount": 1285,
+            "Like2ViewRatio": 0.04568499137707009,
+            "Comment2ViewRatio": 0.0020238292108641044,
+            "Tags": [
+                  "tech"
+            ]
+      }
+}

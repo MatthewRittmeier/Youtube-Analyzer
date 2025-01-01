@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=YliZEuKAkwo",
+            "ChannelLink": "https://www.youtube.com/channel/UCfeonoaE60LpuJLlBidc5IA",
+            "VideoId": "YliZEuKAkwo",
+            "ChannelId": "UCfeonoaE60LpuJLlBidc5IA",
+            "Title": "Making a Game in Desmos: #7  Level 1",
+            "ChannelName": "Reid Captain",
+            "Description": "Please leave your feedback below!\n\nIn this video I cover developing the first level of the game as well as making a checkpoint system."
+      },
+      "stats": {
+            "ViewCount": 26021,
+            "LikeCount": 922,
+            "CommentCount": 32,
+            "Like2ViewRatio": 0.035432919564966754,
+            "Comment2ViewRatio": 0.001229775950194074,
+            "Tags": []
+      }
+}

@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=NZcBDcAbVtI",
+            "ChannelLink": "https://www.youtube.com/channel/UCXEYDu19iy4hJ98EKB7YASg",
+            "VideoId": "NZcBDcAbVtI",
+            "ChannelId": "UCXEYDu19iy4hJ98EKB7YASg",
+            "Title": "Stereo Madness in Desmos Graphing Calculator \u2014 Geometry Dash",
+            "ChannelName": "LeTim [GD]",
+            "Description": "Recreation of level Stereo Madness in Desmos Graphing Calculator.\nThe graph: https://bit.ly/3ApvwzR\nTo start the level, you need to click on the play button next to the expression \"f = 1\". It doesn't work in mobile app, you need to open it in browser.\n\nAlso I can record any your level in high quality. Write to me in Discord (LeTim#2685)."
+      },
+      "stats": {
+            "ViewCount": 78656,
+            "LikeCount": 3189,
+            "CommentCount": 295,
+            "Like2ViewRatio": 0.04054363303498779,
+            "Comment2ViewRatio": 0.0037505085435313263,
+            "Tags": [
+                  "Stereo Madness"
+            ]
+      }
+}

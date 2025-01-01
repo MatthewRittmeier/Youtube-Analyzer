@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=JMc-cT81Lp4",
+            "ChannelLink": "https://www.youtube.com/channel/UCHzGdyurEbdSZVVZ265SpxQ",
+            "VideoId": "JMc-cT81Lp4",
+            "ChannelId": "UCHzGdyurEbdSZVVZ265SpxQ",
+            "Title": "Making a Game With A Graphic Calculator Desmos",
+            "ChannelName": "TheKeyCode",
+            "Description": "In this video, we will create a simple obstacle-avoidance game, inside a Graphical Calculator \"Desmos\".\n\nMusic/Sound:\nZiplock - 120 BPM F Maj by N0IZ -- https://freesound.org/s/745546/ -- License: Attribution 4.0\nParty Pack, Horn Coil 01, Long, 01.wav by InspectorJ -- https://freesound.org/s/484267/ -- License: Attribution 4.0\nWide Flower Fields (loop) by AudioCoffee -- https://freesound.org/s/711646/ -- License: Attribution NonCommercial 4.0; Music by AudioCoffee: https://www.audiocoffee.net/\n\nReid Captain's Series: https://www.youtube.com/playlist?list=PL2lqjYK9wCjzC4Y9xHYhot8YCXMpe9s35\n\nHope you enjoy!\n\n00:00 Introduction\n00:27 Player Logic\n01:41 What are Residuals?\n02:40 Game Logic\n03:20 Obstacles!\n04:36 Collision Detection\n05:45 Adding Pause/Play Functionality\n06:52 Showcase!\n07:25 Thanks for Watching!"
+      },
+      "stats": {
+            "ViewCount": 33,
+            "LikeCount": 3,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.09090909090909091,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "Desmos"
+            ]
+      }
+}

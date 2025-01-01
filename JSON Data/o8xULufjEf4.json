@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=o8xULufjEf4",
+            "ChannelLink": "https://www.youtube.com/channel/UCMMU53wcA6_deTwgcVv9O9Q",
+            "VideoId": "o8xULufjEf4",
+            "ChannelId": "UCMMU53wcA6_deTwgcVv9O9Q",
+            "Title": "Desmos Graphing Calculator Tips for Algebra 1 Part 1",
+            "ChannelName": "Steve Boring",
+            "Description": "Video on how to use the Desmos Graphing calculator on Algebra 1 type problems. This video specifically covers problems students may see on the Virginia State Standards of Learning (SOL) Test for Algebra 1.\n\nPart 1 covers:\n-graphing equations & inequalities\n-substitution\n-systems of equations & inequalities\n-zeros / roots / solutions / x-intercepts\n\nPart 2 covers:\n-Linear & Quadratic Regression"
+      },
+      "stats": {
+            "ViewCount": 24332,
+            "LikeCount": 227,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.00932927831662009,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

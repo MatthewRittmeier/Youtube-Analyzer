@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=9cRHSr56oOg",
+            "ChannelLink": "https://www.youtube.com/channel/UCQAjzEveQ_ZY_fLxSu4pEIg",
+            "VideoId": "9cRHSr56oOg",
+            "ChannelId": "UCQAjzEveQ_ZY_fLxSu4pEIg",
+            "Title": "Polar Curves On desmos",
+            "ChannelName": "The Math Grapher",
+            "Description": ""
+      },
+      "stats": {
+            "ViewCount": 220441,
+            "LikeCount": 12566,
+            "CommentCount": 154,
+            "Like2ViewRatio": 0.057003914879718384,
+            "Comment2ViewRatio": 0.0006985996252965646,
+            "Tags": []
+      }
+}

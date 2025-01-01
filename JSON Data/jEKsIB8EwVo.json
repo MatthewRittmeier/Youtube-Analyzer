@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=jEKsIB8EwVo",
+            "ChannelLink": "https://www.youtube.com/channel/UCLjxZnUJ5k_MweGGjYsz9uQ",
+            "VideoId": "jEKsIB8EwVo",
+            "ChannelId": "UCLjxZnUJ5k_MweGGjYsz9uQ",
+            "Title": "How I made a 3D GAME in Desmos Graphing Calculator",
+            "ChannelName": "Radian628",
+            "Description": "Try it here: https://www.desmos.com/calculator/l7nehb64nz\nDesmoscript, Desmos programming lang and successor to LISPsmos: https://github.com/radian628/desmoscript\nLISPsmos: https://github.com/radian628/lispsmos"
+      },
+      "stats": {
+            "ViewCount": 300504,
+            "LikeCount": 14396,
+            "CommentCount": 480,
+            "Like2ViewRatio": 0.04790618427708117,
+            "Comment2ViewRatio": 0.001597316508266113,
+            "Tags": []
+      }
+}

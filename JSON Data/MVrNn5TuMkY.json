@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=MVrNn5TuMkY",
+            "ChannelLink": "https://www.youtube.com/channel/UCRb6Mw3fJ6OFzp-cB9X29aA",
+            "VideoId": "MVrNn5TuMkY",
+            "ChannelId": "UCRb6Mw3fJ6OFzp-cB9X29aA",
+            "Title": "Bad Apple!! played on Desmos but it's high quality with Bezier Curves",
+            "ChannelName": "Junferno",
+            "Description": "The squeakquel. Taking a bezier curve approach as opposed to linear approximations. The remix used in this video is slightly different from the song, but it's the only way I could get around copyright claims. Video sped up. Uses Desmos API, Potrace, Python PIL.\n\nDiscord server: https://discord.gg/WEykWbjkR2\nCheck out my other stuff on GitHub: https://github.com/kevinjycui\n\nMusic used: ZahranW - Bad Apple!! 8bit remix (Touhou: Lotus Land Story) https://www.youtube.com/watch?v=lNm85uXR3RM"
+      },
+      "stats": {
+            "ViewCount": 2335380,
+            "LikeCount": 115369,
+            "CommentCount": 2506,
+            "Like2ViewRatio": 0.04940052582449109,
+            "Comment2ViewRatio": 0.0010730587741609502,
+            "Tags": []
+      }
+}

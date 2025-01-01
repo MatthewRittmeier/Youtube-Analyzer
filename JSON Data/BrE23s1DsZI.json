@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=BrE23s1DsZI",
+            "ChannelLink": "https://www.youtube.com/channel/UCBVzyfaqrKpxzgtaTH-n52A",
+            "VideoId": "BrE23s1DsZI",
+            "ChannelId": "UCBVzyfaqrKpxzgtaTH-n52A",
+            "Title": "Rhythm Game in Desmos | Desmos Graph",
+            "ChannelName": "Dabombzebra",
+            "Description": "https://www.desmos.com/calculator/j3ycjctdux \n\nBeat my high score with the link above (double-clicking is cheating). \n\nI've had a blast the last week or so making a ton of games and basically treating Desmos as a programming language. Many drafts, but a few bangers so get ready for some fun graphs coming up."
+      },
+      "stats": {
+            "ViewCount": 398,
+            "LikeCount": 16,
+            "CommentCount": 18,
+            "Like2ViewRatio": 0.04020100502512563,
+            "Comment2ViewRatio": 0.04522613065326633,
+            "Tags": []
+      }
+}

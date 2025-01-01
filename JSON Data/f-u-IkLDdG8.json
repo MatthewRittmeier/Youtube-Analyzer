@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=f-u-IkLDdG8",
+            "ChannelLink": "https://www.youtube.com/channel/UCQAjzEveQ_ZY_fLxSu4pEIg",
+            "VideoId": "f-u-IkLDdG8",
+            "ChannelId": "UCQAjzEveQ_ZY_fLxSu4pEIg",
+            "Title": "Desmos graphs",
+            "ChannelName": "The Math Grapher",
+            "Description": ""
+      },
+      "stats": {
+            "ViewCount": 11230,
+            "LikeCount": 412,
+            "CommentCount": 25,
+            "Like2ViewRatio": 0.03668744434550312,
+            "Comment2ViewRatio": 0.002226179875333927,
+            "Tags": []
+      }
+}

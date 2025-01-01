@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=RKbZ3RoA-x4",
+            "ChannelLink": "https://www.youtube.com/channel/UC_IR-dUP9trF4W8LS0_1EnA",
+            "VideoId": "RKbZ3RoA-x4",
+            "ChannelId": "UC_IR-dUP9trF4W8LS0_1EnA",
+            "Title": "Introduction to the Desmos Graphing Calculator",
+            "ChannelName": "Desmos",
+            "Description": "Welcome to a quick introduction to the Desmos graphing calculator. Access the calculator at https://www.desmos.com/. Learn more at http://learn.desmos.com/graphing."
+      },
+      "stats": {
+            "ViewCount": 434593,
+            "LikeCount": 2294,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.005278501954702446,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

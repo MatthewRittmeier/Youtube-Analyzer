@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=_6RiKVeTg6I",
+            "ChannelLink": "https://www.youtube.com/channel/UCNVMxRMEwvo9AS-Jfh6fQFg",
+            "VideoId": "_6RiKVeTg6I",
+            "ChannelId": "UCNVMxRMEwvo9AS-Jfh6fQFg",
+            "Title": "Create a Heart on the Desmos Graphing Calculator",
+            "ChannelName": "Mathispower4u",
+            "Description": "This video shows how to create a heart on the coordinate plane using the Desmos graphing calculator.  Website: Desmos.com or Desmos App\nMake a heart using the TI-84 graphing calculator: https://youtu.be/ULPaTLhslyk"
+      },
+      "stats": {
+            "ViewCount": 58460,
+            "LikeCount": 200,
+            "CommentCount": 6,
+            "Like2ViewRatio": 0.0034211426616489907,
+            "Comment2ViewRatio": 0.00010263427984946972,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

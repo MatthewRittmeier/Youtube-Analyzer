@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=MxnZqemF3Fc",
+            "ChannelLink": "https://www.youtube.com/channel/UCA_ZEpM1XoQsqkf29kkbn9Q",
+            "VideoId": "MxnZqemF3Fc",
+            "ChannelId": "UCA_ZEpM1XoQsqkf29kkbn9Q",
+            "Title": "RUSH E in Desmos!",
+            "ChannelName": "James Cozens",
+            "Description": "RUSH E but in a graphing calculator! (Desmos). To record, I split it into octaves and shifted the tuning accordingly. If you would like to try out the graph, unfortunately you can only play one octave of each part at a time. Likewise, due to the massive size of the equations, it can take a few minutes for the plots to show up, so just bear with as it loads! You need to have a decent amount of memory as well. Here is the link to the graph: https://www.desmos.com/calculator/lsnyus8jox"
+      },
+      "stats": {
+            "ViewCount": 178796,
+            "LikeCount": 10391,
+            "CommentCount": 287,
+            "Like2ViewRatio": 0.0581165126736616,
+            "Comment2ViewRatio": 0.0016051813239669791,
+            "Tags": []
+      }
+}

@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=jACDzJ-rmsM",
+            "ChannelLink": "https://www.youtube.com/channel/UC_IR-dUP9trF4W8LS0_1EnA",
+            "VideoId": "jACDzJ-rmsM",
+            "ChannelId": "UC_IR-dUP9trF4W8LS0_1EnA",
+            "Title": "Learn Desmos: Function Notation",
+            "ChannelName": "Desmos",
+            "Description": "Here's a a quick video tutorial on using function notation in the Desmos Graphing Calculator (https://www.desmos.com/calculator).\n\nYou can find more how-to videos, as well as our collection of interactive tours, at http://help.desmos.com."
+      },
+      "stats": {
+            "ViewCount": 178852,
+            "LikeCount": 659,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.0036846107396059312,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}

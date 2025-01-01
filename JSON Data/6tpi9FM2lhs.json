@@ -1,0 +1,19 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=6tpi9FM2lhs",
+            "ChannelLink": "https://www.youtube.com/channel/UCYGP9CMurJHwkJZnMXOc6qQ",
+            "VideoId": "6tpi9FM2lhs",
+            "ChannelId": "UCYGP9CMurJHwkJZnMXOc6qQ",
+            "Title": "Snake game in a graphing calculator! Desmos programming",
+            "ChannelName": "EdibleMonad",
+            "Description": "Using programming languages for building games is for normies. Real programmers build games in graphing calculators. This is the twitch vod of my building a snake game clone on desmos - graphing calculator.\n\nSnake game is the very popular video game where a snake has to survive on food that spawns in randomly but inevitably, the snake gets swallowed by his own greed... and his mouth... he eats himself... and that's where the game ends. This deep a narrative for a video game has never been seen since. The plot development of this classic video game is being studied in schools now.\n\nBuilt live on https://twitch.tv/ediblemonad\nFinal result: https://www.desmos.com/calculator/dovgn2eany\nLike my shitty tweets on twitter: https://twitter.com/ediblemonad\n\n#programming #desmos #gaming #softwaredevelopment #maths"
+      },
+      "stats": {
+            "ViewCount": 152,
+            "LikeCount": 5,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.03289473684210526,
+            "Comment2ViewRatio": 0.0,
+            "Tags": []
+      }
+}

@@ -1,0 +1,21 @@
+{
+      "videoDetails": {
+            "VideoLink": "https://www.youtube.com/watch?v=rF5g4xVlo4Q",
+            "ChannelLink": "https://www.youtube.com/channel/UC_IR-dUP9trF4W8LS0_1EnA",
+            "VideoId": "rF5g4xVlo4Q",
+            "ChannelId": "UC_IR-dUP9trF4W8LS0_1EnA",
+            "Title": "Learn Desmos: Polar Graphing",
+            "ChannelName": "Desmos",
+            "Description": "Here's a a quick video tutorial on polar graphing in the Desmos Graphing Calculator (https://www.desmos.com/calculator).\n\nYou can find more how-to videos, as well as our collection of interactive tours, at http://help.desmos.com."
+      },
+      "stats": {
+            "ViewCount": 115411,
+            "LikeCount": 411,
+            "CommentCount": 0,
+            "Like2ViewRatio": 0.0035611856755421926,
+            "Comment2ViewRatio": 0.0,
+            "Tags": [
+                  "desmos"
+            ]
+      }
+}
